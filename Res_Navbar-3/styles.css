@@ -1,0 +1,144 @@
+*{
+ margin:0%;
+ padding:0%;
+ box-sizing:border-box;
+ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ overflow: hidden;
+}
+
+html,body{
+ height:100%;
+ width:100%;
+}
+
+#wrapper{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+nav{
+    background-color: black;
+    height: 57px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem 1.5rem;
+}
+
+.logo h1{
+    font-size: 2vw;
+    color: white;
+    text-transform: uppercase;
+}
+
+.navigation-ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.navigation-ul li{
+    text-align: center;
+    list-style: none;
+    /* border: 2px solid white; */
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+}
+.navlinks{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1vw;
+    color: white;
+}
+.navigation-ul li:hover{
+    background-color: white;
+    .navlinks{
+        color: black;
+    }
+}
+
+main{
+    height: calc(100% - 57px);
+    background-color: beige;
+}
+
+
+.ham-btn{
+    display: none;
+}
+.cls-btn{
+    display: none;
+}
+.cl-image{
+    color: white;
+}
+.showbtn-img{
+    color: white;
+}
+
+
+@media screen and (max-width:1000px) {
+    .logo h1{
+        font-size: 4.3vw;
+    }
+    .navlinks{
+        font-size: 2.4vw;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .ham-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .showbtn-img{
+        font-size: 3.8vw;
+    }
+    .showbtn-img:hover{
+        font-size: 3.8vw;
+        color: yellow;
+    }
+    .navigation-ul{
+        width:100%;
+        height: 400px;
+        position: absolute;
+        top:55px;
+        left: 0px;
+        right: 0px;
+        background-color: rgba(0, 0, 0, 0.878);
+        backdrop-filter: blur(10px);
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.7rem;
+        animation: leftside 0.5s ease;
+    }
+    @keyframes leftside {
+        0%{
+            transform: translateX(-1000%);
+        }
+        100%{
+            transform:translateX(0%);
+        }
+    }
+
+    .navigation-ul li {
+        width: 40%;
+    }
+    .navlinks{
+        font-size: 3.3vw;
+    }
+    
+    
+
+}
+
+.open{
+    display: flex;
+}
+
+
