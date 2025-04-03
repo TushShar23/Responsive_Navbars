@@ -1,0 +1,303 @@
+*{
+ margin:0%;
+ padding:0%;
+ box-sizing:border-box;
+ text-decoration: none;
+ list-style: none;
+}
+
+html,body{
+ height:100%;
+ width:100%;
+}
+body{
+    background-image: url(pexels-souvenirpixels-1519088.jpg);
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#wrapper{
+    height: 100%;
+    width: 100%;
+}
+
+.navigation-bar{
+    height: 57px;
+    /* width: 100vw; */
+    background-color: rgba(0, 0, 0, 0.375);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem 1.5rem;
+    backdrop-filter: blur(7px);
+}
+.logo{
+    height: 57px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 2rem; */
+}
+.logo h1{
+   color: white;
+   font-size: 2.5vw;
+   cursor: pointer;
+}
+
+.navigation-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem 1.3rem;
+    gap: 2rem;
+}
+.navigation-links li a{
+    color: white;
+    padding: 0.4rem 0.8rem;
+    font-size: 1.12vw;
+    font-weight: 500;
+}
+.navigation-links li a:hover{
+    color:#083d71;
+    background-color: white;
+    border-radius: 0.8rem;
+    font-weight: 500;
+}
+
+.navigation-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid white; */
+    padding: 0.3rem 1rem;
+    gap: 1rem;
+}
+.btn{
+    border-radius: 0.325rem;
+    background-color: #174a9d;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size:1vw;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.btn:hover{
+    background-color: #597ab0;
+    color:black;
+}
+
+.ham-btn{
+    display: none;
+}
+
+.cl-btn{
+    display: none;
+}
+
+.navigation-links-sidebar{
+    display: none;
+}
+.navigation-buttons-sidebar{
+    display: none;
+}
+
+
+
+/* media queries */
+
+
+@media screen and (max-width:800px){
+    .logo h1{
+        font-size: 4vw;
+    }
+    .navigation-links{
+        gap: 0.6rem;
+    }
+    .navigation-links li a{
+        font-size: 1.7vw;
+    }
+    .navigation-buttons{
+        gap:0.4rem;
+    }
+    .btn{
+        padding: 0.5rem 0.8rem;
+        font-size:1.6vw;
+    }
+    
+
+}
+
+@media screen and (max-width:722px) {
+    .logo h1{
+        font-size: 5vw;
+    }
+    .navigation-links-sidebar{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.375);
+        backdrop-filter: blur(20px);
+        width: 350px;
+        padding: 5rem 2rem;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 3rem;
+        
+    }
+    .nls{
+        font-size: 3.2vw;
+        color: white;
+        padding: 0.3rem 3rem;
+
+    }
+    .nls:hover{
+        background-color: white;
+        color:#083d71;
+        border-radius: 1rem;
+    }
+    
+    .navigation-buttons-sidebar{
+        position: absolute;
+        top:700px;
+        right:10px;
+        display: none;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1.3rem;
+        margin-right: 5vw;
+        padding: 0.4rem 1rem;
+        
+    }
+    .btn-s{
+        border-radius: 0.325rem;
+        background-color: #174a9d;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        font-size:3vw;
+        font-weight: 600;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .btn-s:hover{
+        background-color: #597ab0;
+        color:black;
+    }
+    .cl-btn{
+        margin-top: -3.8rem;
+        display: block;
+        margin-right: 2rem;
+        margin-bottom: 4rem;
+    }
+    .cl-btn i{
+        color: white;
+        font-size: 4vw;
+        font-weight: bold;
+    }
+    .navigation-links{
+        display: none;
+    }
+    .navigation-buttons{
+        display: none;
+    }
+    .ham-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .ham-btn i{
+        color: white;
+        font-size: 4.3vw;
+    }
+} 
+
+@media screen and (max-width:500px){
+    
+    .nls{
+        font-size: 3vw;
+        color: white;
+        padding: 0.3rem 3rem;
+
+    }
+    .nls:hover{
+        background-color: white;
+        color:#083d71;
+        border-radius: 1rem;
+    }
+    .navigation-buttons-sidebar{
+        position: absolute;
+        top:700px;
+        right:10px;
+        display: none;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1.3rem;
+        margin:auto 13vw;
+        
+    }
+    
+    .btn-s{
+        border-radius: 0.325rem;
+        background-color: #174a9d;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        font-size:3vw;
+        font-weight: 600;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .btn-s:hover{
+        background-color: #597ab0;
+        color:black;
+    }
+    .cl-btn{
+        margin-top: -3.8rem;
+        display: block;
+        margin-right: 2rem;
+        margin-bottom: 4rem;
+    }
+    .cl-btn i{
+        color: white;
+        font-size: 4vw;
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width:400px){
+    .navigation-links-sidebar{
+        width: 100%;
+        align-items: center;
+    }
+    .navigation-buttons-sidebar{
+        justify-content: center;
+        gap: 1rem;
+
+    }
+    .cl-btn{
+        margin-top: -3rem;
+        margin-right: 0;
+    }
+    .cl-btn i{
+        font-size: 5vw;
+    }
+    .navigation-buttons-sidebar{
+        justify-content: center;
+        margin-right: 15vw;
+    }
+
+}
+
+.open{
+    display: flex;
+}
+.close{
+    display:none;
+}
+
